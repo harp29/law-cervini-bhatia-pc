@@ -1,0 +1,140 @@
+@import '../abstracts/_variables';
+//@import '../abstracts/butler-fonts';
+
+body{
+  font-family: $font-family--raleway;
+  color: $color-offset--white;
+  margin:0;
+  padding: 0;
+}
+
+/* TYPOGRAPHY STYLES */
+
+////////////////////////////////////
+//
+//* HEADING STYLES *
+//
+///////////////////////////////////
+
+.heading{
+  @include text(3rem, 300, 90%, none, .6rem, 1.5rem, $color-offset--black);
+  font-family: $font-family--playfair;
+
+  // MODIFIERS
+  @include modifier('secondary') {
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    text-transform: capitalize;
+  }
+
+  @include modifier('tertiary') {
+    font-size: 1rem;
+    letter-spacing: 1.14rem;
+  }
+}
+
+
+////////////////////////////////////
+//
+//* PARAGRAPH STYLES *
+//
+///////////////////////////////////
+
+.paragraph{
+  @include text(2rem, 300, 150%, left, 0.1rem, 0.01rem, inherit);
+
+  // MODIFIERS
+  @include modifier('secondary'){
+    font-size: 1.6rem;
+  }
+
+  @include modifier('tertiary'){
+    font-size: 1.4rem;
+  }
+
+  @include modifier('quaternary'){
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    color: $color-offset--black;
+  }
+
+}
+
+
+////////////////////////////////////
+//
+//* AHREF/LINK STYLES *
+//
+///////////////////////////////////
+
+
+
+
+////////////////////////////////////
+//
+//* FONT MODIFIER STYLES *
+//
+///////////////////////////////////
+
+
+//FONT COLOR MODIFIERS:
+.font-color--black{
+  color: $color-offset--black;
+}
+
+.font-color--white{
+  color: $color-offset--white;
+}
+
+.font-color--light-grey{
+  color: $color-offset--light-grey;
+}
+
+.font-color--dark-grey{
+   color: $color-offset--dark-grey;
+ }
+
+.font-color--darker-grey{
+  color: $color-offset--darker-grey;
+}
+
+.font-color--light-brown{
+  color: $color-offset--light-brown;
+}
+
+.font-color--brown{
+  color: $color-offset--brown;
+}
+
+
+
+// SPECIFIC LETTER/WORD/SENTENCE STYLES
+.letter-spacing-big{
+  letter-spacing: .7rem;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.center{
+  text-align: center;
+}
+
+.capitalize{
+  text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

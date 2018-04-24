@@ -1,0 +1,56 @@
+.hero{
+    background-color: $color-offset--black;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+  @include element('overlay-radial-bg'){
+      height: 100%;
+      width: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      opacity: 1;
+
+      background-image: radial-gradient(50% 141%, rgba(0,0,0,0) 42%, #000000 120%);
+  }
+
+  @include element('bcg-img'){
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include modifier('1') {
+      @include bg-image('../images/about-land.jpg');
+      filter: saturate(4) contrast(.8) brightness(.7);
+    }
+
+    @include modifier('team') {
+      @include bg-image('../images/team-bg.jpg');
+      filter: saturate(.5) contrast(.8) brightness(.7);
+    }
+  }
+
+    @include element('content-box'){
+      width: 85%;
+
+      p{
+        color: $color-offset--brown;
+        @include text(1.2rem, 300, 110%, left, .3rem, .1rem, $color-offset--brown);
+        margin-bottom: 5rem;
+        text-transform: uppercase;
+      }
+      h1{
+        color: $color-offset--white;
+        @include text(6.5rem, 300, 110%, left, .3rem, .1rem, inherit);
+        text-transform: capitalize;
+        font-family: $font-family--playfair;
+      }
+    }
+  }

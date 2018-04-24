@@ -1,0 +1,23 @@
+.section-title{
+  padding-top: 15rem;
+
+  span{
+    display: inline-block;
+  }
+
+  span:first-child{
+    margin-bottom: 2rem;
+  }
+
+  span:last-child{
+    margin-bottom: 8rem;
+    //12rem for bigger devices
+  }
+
+  .horizontal-line{
+    width: 85%;
+    height: 1px;
+    background-color: $color-offset--black;
+    margin-bottom: 2rem;
+  }
+}

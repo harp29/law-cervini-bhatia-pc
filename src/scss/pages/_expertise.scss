@@ -1,0 +1,46 @@
+.expertise{
+  background-color: $color-offset--light-brown;
+  .circle-content-box{
+    padding-bottom: 0;
+    .company-description{
+      margin: 0 auto;
+    }
+  }
+
+  .practice-section{
+    padding-top: 0;
+  }
+  .practice-box{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 80%;
+
+    @include element('info'){
+      width: 55%;
+      align-self: flex-end;
+
+      .company-description{
+        @include text(2.2rem, 300, 180%, left, .1rem, .1rem, $color-offset--brown);
+        margin-bottom: 3rem;
+        &:last-of-type{
+          margin-bottom: 15rem;
+        }
+      }
+    }
+
+    @include element('list'){
+      align-self: flex-end;
+      margin-bottom: 15rem;
+      @include element('item'){
+        margin-bottom: 5rem;
+        .practice-name{
+          @include text(3rem, 300, 0%, left, 0rem, .1rem, $color-offset--brown);
+          font-family: $font-family--playfair;
+          font-style: italic;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

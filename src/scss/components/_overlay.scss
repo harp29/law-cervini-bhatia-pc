@@ -1,0 +1,13 @@
+.overlay-radial-bg{
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  opacity: 1;
+
+  background-image: radial-gradient(50% 141%, rgba(0,0,0,0) 42%, #000000 120%);
+}

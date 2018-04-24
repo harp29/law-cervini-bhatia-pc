@@ -1,0 +1,168 @@
+
+/*
+  HTML STYLES
+*/
+
+
+/*
+  NAVIGATION: LAYOUT
+*/
+
+
+
+/*
+  HERO SLIDER: COMPONENT
+*/
+.slider{
+
+  //arrows navigation
+
+  //text-box
+
+}
+
+/*
+  HERO: Component
+*/
+.hero{
+  @include element('content-box'){
+    @include for-tablet-portrait-up{
+      width: 95%;
+      h1{
+          font-size: 10.5rem;
+        }
+    }
+    @include for-desktop-up{
+      h1{
+        font-size: 6.5rem;
+      }
+    }
+    @include for-tablet-landscape-up{
+      width: 88%;
+    }
+    @include for-big-desktop-up{
+      width: 68%;
+    }
+  }
+}
+
+/*
+  CIRCLE-CONTENT-BOX: Component
+*/
+.expertise .circle-content-box .company-description {
+  @include for-tablet-portrait-up{
+     width: 60%;
+   }
+  @include for-big-desktop-up{
+    width: 30%;
+  }
+}
+
+.about .circle-content-box .company-description {
+  @include for-tablet-portrait-up{
+    width: 60%;
+  }
+  @include for-big-desktop-up{
+    width: 30%;
+  }
+
+}
+
+/*
+  ABOUT
+*/
+.about .firm-overview-section .overview__content-box {
+  @include for-tablet-portrait-up{
+    width: 60% !important;
+  }
+  @include for-big-desktop-up{
+    width: 40% !important;
+  }
+}
+
+
+/*
+  PAGE-LINK: COMPONENT
+*/
+.image-wrapper{
+  @include for-desktop-up{
+    width: 50%;
+    height: 590px;
+    @include bg-image('../images/law-building.jpg');
+    display: block !important;
+  }
+  @include for-big-desktop-up{
+    height: 780px;
+  }
+}
+
+.call-to-action{
+  @include for-desktop-up {
+    top: 10%;
+    left: 20%;
+    width: 65%;
+    padding: 0 0 75px 0px;
+    position: absolute;
+    background-color: black;
+  }
+  @include for-big-desktop-up{
+    top: 18%;
+    left: 20%;
+    width: 35%;
+    padding: 0 0 115px 0px;
+  }
+}
+
+.page-link .call-to-action .content-box {
+  @include for-desktop-up {
+    width: 65%;
+    margin: 0 auto;
+  }
+}
+.page-link .call-to-action{
+  @include for-tablet-landscape-up{
+    padding-top: 8rem !important;
+  }
+}
+
+.page-link .call-to-action .section-title .heading{
+  @include for-desktop-up{
+    color: $color-offset--white;
+  }
+}
+
+.page-link .call-to-action__description{
+  @include for-tablet-landscape-up{
+    width: 70%;
+    margin: 0 auto 2rem auto;
+  }
+}
+
+/*
+  TEAM: PAGE
+*/
+.team .team-components-holder .team-member__image-box{
+  @include for-desktop-up{
+    width: 35% !important;
+  }
+  @include for-big-desktop-up{
+    width: 25% !important;
+    height: 450px !important;
+  }
+}
+
+/*
+  FOOTER LAYOUT
+*/
+.footer-information{
+  @include for-tablet-landscape-up{
+    margin-bottom: 5rem;
+  }
+}
+
+.footer__list:first-of-type {
+  @include for-big-desktop-up{
+    width: 20%;
+  }
+}
+

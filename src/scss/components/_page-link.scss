@@ -1,0 +1,66 @@
+.page-link{
+  position: relative;
+  margin-bottom: 15rem;
+
+  .image-wrapper{
+    display: none;
+  }
+
+  .circle-line{
+    position: absolute;
+    z-index: 1;
+    top: 4%;
+    left: 17%;
+    width: 58%;
+    height: 48%;
+    border-radius: 50%;
+    border: 1px solid #fff;
+  }
+
+  .call-to-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //position: absolute;
+    //z-index: 2;
+    //padding-top: 8rem;
+    //background-color: $color-offset--black;
+    //box-shadow: rgba(0, 0, 0, 0.4) -15px -13px 37px -2px;
+
+    .content-box{
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .section-title{
+      padding: 0;
+      padding-bottom: 6rem;
+      padding-top: 4rem;
+
+      span:last-child {
+        margin-bottom: 0rem;
+      }
+
+      .heading {
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        line-height: 0%;
+
+        .horizontal-line {
+          background-color: $color-offset--dark-grey;
+        }
+
+        span{
+          padding: 0;
+        }
+      }
+    }
+
+    @include element('description'){
+      @include text(1.6rem, 300, 200%, left, .1rem, .1rem, $color-offset--brown);
+      margin-bottom: 2rem;
+    }
+  }
+}

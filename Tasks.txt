@@ -1,0 +1,15 @@
+Description:Tasks:
+
+       Due today: Fully Responsive. Font bigger for all pages on cell phones
+       and button is not full width. Margins for cell phones needs to be fixed.
+       *Expertise Page Link needs more bottom  margin.*
+
+
+Landing Page - not view able on old phones
+About Page - .circle-content-box .company-description {
+    width: 100%; -- responsive style not working -- github issue not uploading new version of project
+}
+Expertise Page
+
+Post on github and send to client. Make video and post on instagram and facebook.
+10 minutes before

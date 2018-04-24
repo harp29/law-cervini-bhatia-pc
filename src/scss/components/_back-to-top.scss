@@ -1,0 +1,43 @@
+.back-to-top{
+  padding-bottom: 5rem;
+  //padding-bottom: 10rem;
+
+  @include element('image'){
+    background: url('../images/justice.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10rem;
+  }
+
+  @include element('text'){
+    position: relative;
+    @include text(1.4rem, 300, 150%, center, 0.1rem, 0.1rem, $color-offset--black);
+    text-transform: capitalize;
+    font-family: $font-family--playfair;
+    cursor: pointer;
+
+    &:before, &:after{
+      position: absolute;
+      content: ' ';
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10%;
+      height: 1px;
+      background-color: $color-offset--brown;
+    }
+
+    &:before{
+      left: 30%;
+    }
+
+    &:after{
+      left: 60%;
+    }
+  }
+}

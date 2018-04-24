@@ -1,0 +1,105 @@
+.cta{
+  display: block;
+  position: relative;
+
+  overflow: hidden !important;
+
+  width: max-content;
+
+  //MOZILLA FIRFOX - WIDTH STYLE
+  @-moz-document url-prefix() {
+    width:13.5%;
+  }
+
+  margin: 0 auto;
+  padding: 1.5rem 3.5rem;
+
+  cursor: pointer;
+
+  @include text(.6rem, 300, inherit, center, .5rem, .9rem, $color-offset--white);
+  font-family: $font-family--playfair;
+  text-transform: uppercase;
+
+  @include modifier('left'){
+    text-align: left;
+  }
+
+    position: relative;
+    z-index: 1;
+
+    transition: all .2s ease-out;
+
+    overflow: hidden;
+
+    &:after {
+      position: absolute;
+      bottom: 0rem;
+      left: 0;
+      z-index: -1;
+
+      content: '';
+
+      background-color:  $color-offset--brown;
+
+      height: 5%;
+      width: 100%;
+
+      transition: all .3s ease-out;
+    }
+
+    &:hover:after {
+      height: 100%;
+    }
+
+    &:hover {
+      color: $color-offset--black;
+    }
+
+
+    @include modifier('brown'){
+      color: $color-offset--brown;
+    }
+
+    @include modifier('reverse'){
+      &:after{
+        top: 0rem;
+      }
+    }
+
+}
+
+// SCROLL CTA - 'SCROLL DOWN'
+.scroll-cta{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  @include element('line'){
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+
+    width: 2%;
+
+    background-color: $color-offset--white;
+
+    -webkit-animation: scroll-line 2s infinite  ease-out; /* Safari 4+ */
+    -moz-animation:    scroll-line 2s infinite  ease-out; /* Fx 5+ */
+    -o-animation:      scroll-line 2s infinite  ease-out; /* Opera 12+ */
+    animation:         scroll-line 2s infinite  ease-out; /* IE 10+, Fx 29+ */
+  }
+}
+
+.form-cta-box{
+  p{
+    @include text(1rem, 300, inherit, center, .5rem, .9rem, $color-offset--black);
+    text-transform: uppercase;
+    position: relative;
+    top: -10px;
+    font-family: $font-family--playfair;
+  }
+
+  margin-bottom: 12rem;
+}

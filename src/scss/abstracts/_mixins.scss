@@ -1,0 +1,57 @@
+
+/* Text Mixin */
+@mixin text($font-size,$weight,
+ $line-height, $text-align, $word-spacing,
+$letter-spacing, $color){
+  font-size: $font-size;
+  font-weight: $weight;
+  line-height: $line-height;
+  text-align: $text-align;
+  word-spacing: $word-spacing;
+  letter-spacing: $letter-spacing;
+  color: $color;
+}
+
+/* BG Mixin */
+@mixin bg-image($background-image){
+  background: url($background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  //background-attachment: fixed;
+  background-position: center center;
+}
+
+@mixin element($element){
+  &__#{$element}{
+    @content;
+  }
+}
+
+@mixin modifier($modifier){
+  &--#{$modifier}{
+    @content;
+  }
+}
+
+/* Responsive Mixins */
+// MEDIA QUERY MANAGER
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+
+
